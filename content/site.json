@@ -1,0 +1,368 @@
+{
+  "site": {
+    "name": "Little Daisy",
+    "business_name": "Little Daisy Bake Shop",
+    "brand_subtitle": "BAKE SHOP · UPPER MONTCLAIR",
+    "logo": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/39733logo1.png?fit=max&w=200&auto=format,compress",
+    "logo_alt": "Little Daisy Bake Shop logo",
+    "seo_title": "Little Daisy Bake Shop | Upper Montclair, NJ",
+    "seo_description": "Scratch-baked cakes, cookies, and crumb cake from a nut-free kitchen in Upper Montclair, NJ.",
+    "order_url": "https://www.thelittledaisybakeshop.com/order-online/",
+    "instagram_url": "https://www.instagram.com/littledaisybakeshop/",
+    "facebook_url": "https://www.facebook.com/TheLittleDaisyBakeShop/",
+    "google_maps_url": "https://maps.google.com/?cid=3087489336073391528",
+    "phone_display": "(973) 707-2157",
+    "phone_link": "tel:9737072157",
+    "hours_chip": "TUE–SAT · 8AM–4PM"
+  },
+  "hero": {
+    "eyebrow": "622 Valley Rd · Upper Montclair, NJ",
+    "title": "Fresh from the",
+    "title_emphasis": "oven.",
+    "description": "Little Daisy hand-makes cakes, cookies, scones, and crumb cake from scratch, five days a week — in a kitchen that's never let a peanut or tree nut through the door.",
+    "primary_button": "Order a Cake",
+    "secondary_button": "Browse the Counter",
+    "badges": [
+      "Voted Best in Essex",
+      "Tree Nut & Peanut Free Facility"
+    ],
+    "images": [
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/33200E485DE82-F5C3-4F64-94B6-97472CE289BF.JPG?fit=max&w=1000&auto=format,compress",
+        "alt": "Inside Little Daisy Bake Shop in Upper Montclair"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/58421IMG_2496A9C56A92-1.jpeg?fit=max&w=800&auto=format,compress",
+        "alt": "Little Daisy Bake Shop neon sign"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/43127F3F329CF-D71F-470D-8ECE-5ADA7D9238E2.jpeg?fit=max&w=800&auto=format,compress",
+        "alt": "An assortment of baked goods from Little Daisy"
+      }
+    ]
+  },
+  "marquee": [
+    "Crumb Cake",
+    "Daisy Dips",
+    "Custom Cakes",
+    "Buttermilk Scones",
+    "Cinnamon Rolls, Fri–Sat",
+    "Always Nut-Free",
+    "Baked From Scratch"
+  ],
+  "counter": {
+    "eyebrow": "The Counter",
+    "title": "Something new every time you walk in.",
+    "description": "Small batches, baked fresh each morning — here's a taste of what tends to disappear first.",
+    "items": [
+      {
+        "name": "Classic Crumb Cake",
+        "note": "Fridays & Saturdays",
+        "price": "$5.00",
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&w=700&auto=format,compress",
+        "alt": "Classic crumb cake from Little Daisy Bake Shop"
+      },
+      {
+        "name": "Special Crumb Cake",
+        "note": "Rotating special flavors",
+        "price": "$6.50",
+        "image": "/images/counter-special-crumb-cake.webp",
+        "alt": "Assorted special crumb cakes with toppings"
+      },
+      {
+        "name": "Classic Cinnamon Rolls",
+        "note": "Fridays & Saturdays",
+        "price": "$4.50",
+        "image": "/images/counter-classic-cinnamon-rolls.webp",
+        "alt": "Pan of classic frosted cinnamon rolls"
+      },
+      {
+        "name": "Special Cinnamon Rolls",
+        "note": "Rotating special flavors",
+        "price": "$7.00",
+        "image": "/images/counter-special-cinnamon-rolls.webp",
+        "alt": "Cookie-topped special cinnamon rolls"
+      },
+      {
+        "name": "Daisy Dips",
+        "note": "Cake & buttercream, dunked in chocolate",
+        "price": "$3.00 – $24.00",
+        "image": "/images/counter-daisy-dips.webp",
+        "alt": "Tray of chocolate-coated Daisy Dips"
+      },
+      {
+        "name": "Daisy Dip Cones",
+        "note": "A sprinkle-covered twist on Daisy Dips",
+        "price": "Ask at the counter",
+        "image": "/images/counter-daisy-dip-cones.webp",
+        "alt": "Daisy Dip cones decorated with sprinkles"
+      },
+      {
+        "name": "Scones",
+        "note": "Buttermilk & daily special flavors",
+        "price": "$2.50 – $3.25",
+        "image": "/images/counter-scones.webp",
+        "alt": "Chocolate-drizzled and classic scones"
+      },
+      {
+        "name": "Pumpkin & Seasonal Breads",
+        "note": "By the slice or loaf, while in season",
+        "price": "$3.00 – $18.00",
+        "image": "/images/counter-pumpkin-bread.webp",
+        "alt": "Pumpkin bread loaves ready to slice"
+      },
+      {
+        "name": "Key Lime Pies",
+        "note": "Multiple sizes available",
+        "price": "$12.00 – $35.00",
+        "image": "/images/counter-key-lime-pie.webp",
+        "alt": "Little Daisy key lime pies with piped cream"
+      },
+      {
+        "name": "Key Lime Pie Slab",
+        "note": "A shareable key lime favorite",
+        "price": "Ask about availability",
+        "image": "/images/counter-key-lime-pie-slab.webp",
+        "alt": "Key lime pie slab topped with piped cream"
+      },
+      {
+        "name": "Cake by the Slice",
+        "note": "Ask what’s available today",
+        "price": "$5.00 – $6.00",
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/25187F67AF512-BAA9-4593-A6AA-54E45DD940D0.JPG?fit=max&w=700&auto=format,compress",
+        "alt": "Assorted Little Daisy cake slices"
+      },
+      {
+        "name": "Coffee & Espresso Drinks",
+        "note": "Made to order",
+        "price": "See counter menu",
+        "image": "/images/counter-coffee-and-espresso.webp",
+        "alt": "Two Little Daisy coffee drinks"
+      },
+      {
+        "name": "Custom Cakes",
+        "note": "Basic Betty & beyond —",
+        "link_label": "see the full lineup",
+        "link_url": "#cakes",
+        "price": "From $40.00",
+        "image": "/images/counter-custom-cake.webp",
+        "alt": "Two-tier custom cake with blue trim and strawberries"
+      },
+      {
+        "name": "Bars & Blondies",
+        "note": "Raspberry squares, Oreo bars & more",
+        "price": "$3.50 – $4.00",
+        "image": "/images/counter-bars-and-blondies.webp",
+        "alt": "Assorted bars and blondies"
+      },
+      {
+        "name": "S’mores Brownies",
+        "note": "A rotating seasonal bar",
+        "price": "Ask at the counter",
+        "image": "/images/counter-smores-brownie.webp",
+        "alt": "S'mores brownies with toasted marshmallow layers"
+      },
+      {
+        "name": "Banana Bread",
+        "note": "The fan-favorite loaf, no nuts",
+        "price": "$18.00 loaf",
+        "image": "/images/counter-banana-bread.webp",
+        "alt": "Sliced banana bread loaf"
+      },
+      {
+        "name": "Cookies",
+        "note": "Chocolate chip, snickerdoodle, sprinkle",
+        "price": "$3.00 – $3.75",
+        "image": "/images/counter-cookies.webp",
+        "alt": "Stacks of fresh Little Daisy cookies"
+      },
+      {
+        "name": "Seasonal Decorated Sugar Cookies",
+        "note": "Hand-decorated designs change with the season",
+        "price": "$5.00",
+        "image": "/images/counter-decorated-sugar-cookies.webp",
+        "alt": "Seasonal hand-decorated sugar cookies"
+      },
+      {
+        "name": "Cupcakes",
+        "note": "Chocolate, vanilla, red velvet, Hostess",
+        "price": "$3.00 – $4.50",
+        "image": "/images/gallery-cupcakes.webp",
+        "alt": "Vanilla and chocolate Little Daisy cupcakes"
+      }
+    ]
+  },
+  "kitchen": {
+    "eyebrow": "The Kitchen",
+    "title": "A kitchen that's never touched a peanut or tree nut.",
+    "description": "Every cake, cookie, and cupcake is baked on-site — no peanuts, no tree nuts, no substitutions. If allergies are part of the celebration, give us a call and we'll walk you through exactly what's in everything we make.",
+    "call_button": "Call (973) 707-2157",
+    "owner_button": "Meet the owner",
+    "facts": [
+      {
+        "title": "Baked from scratch",
+        "description": "Real butter, real eggs, real buttermilk — no shortcuts."
+      },
+      {
+        "title": "Small batches, daily",
+        "description": "Tuesday through Saturday, so everything's actually fresh."
+      },
+      {
+        "title": "Ask us anything",
+        "description": "Call ahead and we'll talk through every ingredient with you."
+      }
+    ]
+  },
+  "cakes": {
+    "eyebrow": "Custom Cakes",
+    "title": "From Basic Betty to Unicorn.",
+    "description": "Cakes filled and frosted “just for you.”",
+    "items": [
+      {
+        "name": "Basic Betty",
+        "description": "Chocolate or vanilla cake, filled and frosted in vanilla buttercream, with a simple trim and sprinkles.",
+        "size": "6″ feeds 6–10",
+        "price": "$40 / $75",
+        "image": "/images/cake-basic-betty.webp",
+        "alt": "Basic Betty cake with white buttercream and confetti trim"
+      },
+      {
+        "name": "Chocolate Lover",
+        "description": "Layers of chocolate cake, ganache filling, and chocolate buttercream, finished with a drip on top.",
+        "size": "6″ / 9″",
+        "price": "$50 / $90",
+        "image": "/images/cake-chocolate-lover.webp",
+        "alt": "Chocolate Lover cake with chocolate drip and chocolate decorations"
+      },
+      {
+        "name": "Party Cake",
+        "description": "Funfetti cake with vanilla buttercream filling and frosting, confetti sprinkles, and dollops on top.",
+        "size": "6″ / 9″",
+        "price": "$45 / $80",
+        "image": "/images/cake-party.webp",
+        "alt": "Party Cake with confetti sprinkles and buttercream dollops"
+      },
+      {
+        "name": "Simple Celebration",
+        "description": "A two-tier cake with your choice of cake and buttercream, finished in a simple, elegant style.",
+        "size": "Feeds 25–30",
+        "price": "$130",
+        "image": "/images/cake-simple-celebration.webp",
+        "alt": "Two-tier Simple Celebration cake with smooth white buttercream"
+      },
+      {
+        "name": "Special Celebration",
+        "description": "A two-tier cake with vanilla buttercream, a chocolate drip, and confetti sprinkles on the sides.",
+        "size": "Feeds 25–30",
+        "price": "$160",
+        "image": "/images/cake-special-celebration.webp",
+        "alt": "Two-tier Special Celebration cake with chocolate drip and confetti sprinkles"
+      },
+      {
+        "name": "Sprinkle Cake",
+        "description": "Chocolate or vanilla cake with vanilla buttercream, covered from top to bottom in rainbow sprinkles.",
+        "size": "6″ / 9″",
+        "price": "$50 / $85",
+        "image": "/images/cake-sprinkle.webp",
+        "alt": "Sprinkle Cake with a rainbow sprinkle coating and a cut slice"
+      },
+      {
+        "name": "Unicorn Cake",
+        "description": "A magical cake with pastel buttercream flowers, ears, eyelashes, and a sparkling horn.",
+        "size": "6″ / tiered",
+        "price": "$85 / $200",
+        "image": "/images/cake-unicorn.webp",
+        "alt": "Pastel Unicorn cake with buttercream flowers and a gold horn"
+      }
+    ],
+    "order_note": "Orders can be placed until 11am the day before pickup — by Thursday at 11am for Saturday pickup. Cancellations need 48 hours' notice.",
+    "order_button": "Start Your Cake Order"
+  },
+  "reviews": {
+    "eyebrow": "Google Reviews",
+    "title": "A little love from the neighborhood.",
+    "description": "Five-star notes from people who trusted Little Daisy with the sweetest part of their celebrations.",
+    "link_label": "READ MORE ON GOOGLE ↗",
+    "items": [
+      {
+        "quote": "It was gorgeous and delicious. Everyone raved about this cake.",
+        "name": "Carolyn O",
+        "initial": "C"
+      },
+      {
+        "quote": "The cake also tasted AWESOME.",
+        "name": "Margaret",
+        "initial": "M"
+      },
+      {
+        "quote": "I loved my cake so much and it tasted amazing!",
+        "name": "Eva Lorraine",
+        "initial": "E"
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Little Daisy Gallery",
+    "title": "A peek inside the bake shop.",
+    "description": "Celebrations, counter favorites, and a little behind-the-scenes sweetness.",
+    "images": [
+      { "image": "/images/gallery-neon-cake-counter.webp", "alt": "Little Daisy neon sign glowing above a display of cakes", "layout": "wide" },
+      { "image": "/images/gallery-decorated-cookies.webp", "alt": "Colorful hand-decorated celebration cookies", "layout": "tall" },
+      { "image": "/images/gallery-celebration-cookies.webp", "alt": "Three oversized celebration cookies on a plate", "layout": "standard" },
+      { "image": "/images/gallery-heart-cake.webp", "alt": "Heart-decorated cake surrounded by matching cupcakes", "layout": "tall" },
+      { "image": "/images/gallery-birthday-cupcake.webp", "alt": "Birthday celebration with a cupcake and confetti", "layout": "standard" },
+      { "image": "/images/gallery-cake-sign.webp", "alt": "Have your cake and eat it too sign with confetti", "layout": "standard" },
+      { "image": "/images/gallery-shop-art.webp", "alt": "Colorful umbrella artwork at Little Daisy", "layout": "standard" },
+      { "image": "/images/gallery-cupcakes.webp", "alt": "Vanilla and chocolate cupcakes with rainbow sprinkles", "layout": "standard" },
+      { "image": "/images/gallery-boxed-cupcakes.webp", "alt": "Fresh cupcakes packed in bakery boxes", "layout": "tall" },
+      { "image": "/images/gallery-baking-ingredients.webp", "alt": "Baking ingredients arranged on a floral tablecloth", "layout": "wide" },
+      { "image": "/images/gallery-latte.webp", "alt": "A flower-topped latte on a wooden counter", "layout": "standard" },
+      { "image": "/images/gallery-storefront-sign.webp", "alt": "Little Daisy Bake Shop storefront and neon sign", "layout": "tall" },
+      { "image": "/images/gallery-assorted-bars.webp", "alt": "An assortment of Little Daisy bars and blondies", "layout": "wide" },
+      { "image": "/images/gallery-winter-cookies.webp", "alt": "Winter-themed decorated sugar cookies", "layout": "standard" }
+    ]
+  },
+  "owner": {
+    "eyebrow": "Meet the Owner",
+    "name": "Jennifer Snyder",
+    "image": "/images/owner-jennifer-snyder.webp",
+    "image_alt": "Jennifer Snyder, owner of Little Daisy Bake Shop",
+    "paragraphs": [
+      "Jennifer Snyder’s career began with internet startups in 1990s Seattle before she moved into public relations for Chicago’s high-end chef and restaurant scene. She continued her public relations work in New York City before settling in Montclair. A lifelong baker, Snyder began baking for friends and family, and it quickly blossomed into the opening of The Little Daisy Bake Shop in 2011. Her mission was simple: bake everything from scratch — no boxes or mixes — and offer treats that tasted like they came straight from Mom’s oven.",
+      "The first location, at 626 Valley Road, was a kitchen space about as big as a closet. Snyder’s small team served nut- and peanut-free desserts that quickly gained local attention and earned the title of Best Boutique Bakery in Essex County. After less than two years, Little Daisy moved a few doors down to a space more than three times as big. Snyder’s philosophy of using real ingredients and baking fresh continues to shine through every product and in the bakery’s continued success.",
+      "Snyder also believes strongly in giving back to the community. Little Daisy has supported schools, churches, sports, arts and music programs, and many local nonprofit organizations. The shop has been the Official Bakery of the Montclair Film Festival for more than a decade.",
+      "Snyder’s favorite Little Daisy menu items are crumb cake and chocolate chip cookies. She and her family live in Montclair with their two Labradors, Daisy and Wrigley."
+    ],
+    "signature": "Jennifer Snyder",
+    "role": "Owner & Baker"
+  },
+  "visit": {
+    "eyebrow": "Visit",
+    "title": "Stop by Uptown.",
+    "address_line_1": "622 Valley Rd",
+    "address_line_2": "Upper Montclair, NJ 07043",
+    "hours": [
+      { "days": "Tuesday – Saturday", "time": "8am – 4pm" },
+      { "days": "Sunday & Monday", "time": "Closed" }
+    ],
+    "directions_button": "Get Directions"
+  },
+  "social": {
+    "eyebrow": "Follow Along",
+    "handle": "@littledaisybakeshop",
+    "button": "Follow on Instagram",
+    "images": [
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/75392A79391B7-C5FB-4CCD-A5F2-0E01B3C50D3F.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/18350IMG_1247.jpeg?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/14999FD8F0CF7-5B6C-43F5-AA7F-37237C60E1B6.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/547902091A72C-DB56-4DC7-847C-2836C7D39389.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
+      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/8030247E8D8F7-1FC8-476B-8451-D5173D083EBC.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" }
+    ]
+  },
+  "footer": {
+    "tagline": "A nut & peanut-free scratch bakery in Upper Montclair, NJ. Cakes, cookies, cupcakes, and crumb cake, baked fresh five days a week.",
+    "bottom_line": "The Little Daisy Bake Shop · 622 Valley Rd, Upper Montclair, NJ 07043",
+    "credit": "Design concept"
+  }
+}

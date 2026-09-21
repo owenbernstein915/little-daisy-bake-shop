@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SEO_TITLE}}</title>
+<meta name="description" content="{{SEO_DESCRIPTION}}">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='%236E2142'%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(45 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(90 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(135 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(180 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(225 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(270 20 20)'/%3E%3Cellipse cx='20' cy='9' rx='4.2' ry='8.5' transform='rotate(315 20 20)'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='5.5' fill='%23F5B324'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Parisienne&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF8EA;
+    --paper:#FFFDF9;
+    --ink:#2B2016;
+    --ink-soft:#5B4A3A;
+    --yolk:#F5B324;
+    --yolk-deep:#D98E0A;
+    --plum:#6E2142;
+    --plum-deep:#4A1730;
+    --leaf:#5C7A44;
+    --line:#E7D9BE;
+    --shadow: 0 24px 48px -24px rgba(43,32,22,.4);
+    --shadow-sm: 0 10px 24px -14px rgba(43,32,22,.35);
+    --radius: 20px;
+    --container: 1200px;
+    --font-display:"Bricolage Grotesque", system-ui, sans-serif;
+    --font-body:"Plus Jakarta Sans", system-ui, sans-serif;
+    --font-mono:"IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,h4{ margin:0; font-family:var(--font-display); font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
+  p{ margin:0; }
+  button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+
+  :focus-visible{ outline:3px solid var(--plum); outline-offset:3px; border-radius:4px; }
+
+  .wrap{ max-width:var(--container); margin-inline:auto; padding-inline:clamp(1.25rem,4vw,3rem); }
+  .section-pad{ padding-block:clamp(3.75rem,7vw,6.5rem); }
+  section[id]{ scroll-margin-top:96px; }
+
+  /* ---------- Landing typography ---------- */
+  .landing-title{
+    margin:0;
+    color:var(--plum-deep);
+    font-family:"Parisienne", cursive;
+    font-size:clamp(5rem,9vw,8.75rem);
+    font-weight:400;
+    letter-spacing:-.035em;
+    line-height:.86;
+    text-shadow:.035em .045em 0 rgba(245,179,36,.48);
+    white-space:nowrap;
+  }
+  .landing-est{
+    color:var(--plum);
+    font-family:var(--font-mono);
+    font-size:clamp(.72rem,.65rem + .25vw,.9rem);
+    font-weight:600;
+    letter-spacing:.22em;
+    line-height:1.2;
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--plum);
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+  }
+  .on-plum .eyebrow, .on-ink .eyebrow{ color:var(--yolk); }
+
+  .h2{ font-size:clamp(2rem,1.3rem + 2.6vw,3.15rem); line-height:1.05; }
+  .lede{ font-size:clamp(1.05rem,.98rem + .4vw,1.2rem); color:var(--ink-soft); max-width:46ch; }
+  .on-plum .lede{ color:rgba(255,248,234,.82); }
+
+  .daisy-mark{ width:1em; height:1em; color:var(--plum); flex:none; }
+  .on-plum .daisy-mark, .on-ink .daisy-mark{ color:var(--yolk); }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; gap:.55rem;
+    font-family:var(--font-body); font-weight:700; font-size:.95rem;
+    padding:.85rem 1.5rem; border-radius:999px;
+    border:2px solid transparent; transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--yolk); color:var(--ink); }
+  .btn-primary:hover{ background:var(--plum); color:var(--cream); }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--ink); }
+  .btn-outline:hover{ background:var(--ink); color:var(--cream); }
+  .btn-outline.on-plum{ color:var(--cream); border-color:var(--cream); }
+  .btn-outline.on-plum:hover{ background:var(--cream); color:var(--plum); }
+  .btn-sm{ padding:.6rem 1.05rem; font-size:.82rem; }
+
+  /* Ticket / punch-hole detail */
+  .ticket{
+    position:relative;
+    border:2px dashed var(--line);
+    border-radius:14px;
+    background:var(--paper);
+  }
+  .ticket::before,.ticket::after{
+    content:""; position:absolute; top:-9px; width:18px; height:18px; border-radius:50%;
+    background:var(--cream);
+    border:2px dashed var(--line);
+  }
+  .ticket::before{ left:-9px; }
+  .ticket::after{ right:-9px; }
+
+  /* Scalloped section dividers */
+  .scallop{ height:26px; width:100%; background-repeat:repeat-x; background-size:26px 26px; }
+  .scallop--to-plum{ background-color:var(--plum); background-image:radial-gradient(circle at 13px 0, var(--cream) 13px, transparent 13.3px); }
+  .scallop--to-cream{ background-color:var(--cream); background-image:radial-gradient(circle at 13px 0, var(--plum) 13px, transparent 13.3px); }
+  .scallop--ink-to-cream{ background-color:var(--cream); background-image:radial-gradient(circle at 13px 0, var(--ink) 13px, transparent 13.3px); }
+  .scallop--cream-to-ink{ background-color:var(--ink); background-image:radial-gradient(circle at 13px 0, var(--cream) 13px, transparent 13.3px); }
+
+  /* Reveal on scroll */
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible{ opacity:1; transform:translateY(0); }
+    .reveal-delay-1{ transition-delay:.08s; }
+    .reveal-delay-2{ transition-delay:.16s; }
+    .reveal-delay-3{ transition-delay:.24s; }
+  }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,248,234,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  .site-header.is-scrolled{ border-color:var(--line); box-shadow:0 8px 24px -18px rgba(43,32,22,.5); }
+  .site-header .wrap{ max-width:1420px; padding-inline:clamp(1.25rem,3vw,2.5rem); }
+  .header-inner{ display:flex; align-items:center; gap:clamp(.9rem,1.7vw,1.5rem); min-height:72px; padding-block:.65rem; }
+  .brand{ display:flex; align-items:center; gap:.65rem; flex:none; font-family:var(--font-display); font-weight:800; font-size:1.15rem; line-height:1.05; white-space:nowrap; margin-right:auto; }
+  .brand .daisy-mark{ width:2rem; height:2rem; }
+  .brand-logo{ width:2.25rem; height:2.25rem; object-fit:contain; flex:none; }
+  .brand small{ display:block; margin-top:.2rem; font-family:var(--font-mono); font-weight:600; font-size:.56rem; line-height:1.2; letter-spacing:.12em; color:var(--ink-soft); white-space:nowrap; }
+
+  .nav{ display:flex; align-items:center; gap:1.25rem; flex:none; }
+  .nav-links{ display:flex; align-items:center; flex-wrap:nowrap; gap:clamp(.9rem,1.5vw,1.45rem); }
+  .nav-links a{ display:block; font-weight:600; font-size:.9rem; line-height:1.2; white-space:nowrap; position:relative; padding-block:.45rem; }
+  .nav-links a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:2px; background:var(--plum); transition:right .22s ease; }
+  .nav-links a:hover::after{ right:0; }
+
+  .hours-chip{
+    font-family:var(--font-mono); font-size:.72rem; font-weight:600; letter-spacing:.06em;
+    border:1.5px solid var(--line); border-radius:999px; padding:.4rem .85rem;
+    white-space:nowrap; flex:none;
+  }
+  .nav .btn{ flex:none; }
+  .nav-toggle{ display:none; padding:.4rem; }
+  .nav-toggle span{ display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:transform .2s ease, opacity .2s ease; }
+
+  @media (max-width:1280px){
+    .hours-chip{ display:none; }
+  }
+  @media (max-width:1180px){
+    .nav{ gap:1rem; }
+    .nav-links{ gap:.9rem; }
+    .nav-links a{ font-size:.86rem; }
+    .brand{ font-size:1.05rem; }
+  }
+  @media (max-width:1050px){
+    body.nav-open{ overflow:hidden; }
+    .site-header{ background:var(--cream); backdrop-filter:none; }
+    .header-inner{ min-height:68px; }
+    .nav{ position:fixed; inset:68px 0 0 0; z-index:49; min-height:calc(100dvh - 68px); background:var(--cream); border-top:1px solid var(--line); flex-direction:column; align-items:flex-start; padding:1.5rem clamp(1.25rem,5vw,3rem) 2.5rem; gap:1.25rem; transform:translateY(-8px); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .2s ease, transform .2s ease, visibility .2s ease; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+    .nav.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+    .nav.is-open{ visibility:visible; }
+    .nav-links{ width:100%; flex-direction:column; align-items:stretch; gap:.35rem; }
+    .nav-links li{ width:100%; }
+    .nav-links a{ min-height:48px; display:flex; align-items:center; width:100%; padding:.7rem 0; font-size:1.05rem; touch-action:manipulation; }
+    .nav-links a::after{ display:none; }
+    .hours-chip{ display:inline-flex; order:0; margin-top:.15rem; }
+    .nav .btn{ min-height:48px; touch-action:manipulation; }
+    .nav-toggle{ position:relative; z-index:51; display:block; min-width:44px; min-height:44px; touch-action:manipulation; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  }
+  @media (max-width:520px){
+    .brand small{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:calc(100vh - 72px);
+    min-height:calc(100svh - 72px);
+    display:flex;
+    align-items:center;
+    padding-block:clamp(2.5rem,6vw,4.5rem) clamp(3rem,6vw,5rem);
+  }
+  .hero-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    grid-template-areas:"intro collage";
+    column-gap:clamp(2rem,5vw,4rem);
+    row-gap:0;
+    align-items:center;
+  }
+  .hero-intro{ grid-area:intro; align-self:center; }
+  .hero-content{ display:contents; }
+  .hero-intro .eyebrow{ margin-bottom:1.1rem; }
+  .hero h1{ font-size:clamp(2.6rem,1.9rem + 3.3vw,4.6rem); line-height:1.02; margin-bottom:1.25rem; }
+  .hero h1 em{ font-style:normal; color:inherit; }
+  .hero .lede{ margin-bottom:1.75rem; max-width:42ch; }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:.9rem; }
+  .hero-badges{ display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.35rem; }
+  .badge{
+    font-family:var(--font-mono); font-size:.72rem; font-weight:600; letter-spacing:.05em;
+    display:inline-flex; align-items:center; gap:.45rem;
+    background:var(--paper); border:1.5px solid var(--line); border-radius:999px; padding:.5rem .9rem;
+  }
+  .badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--leaf); }
+
+  .hero-collage{ grid-area:collage; display:grid; grid-template-columns:repeat(12,1fr); grid-template-rows:repeat(10,1fr); height:560px; }
+  .hero-collage img{ width:100%; height:100%; object-fit:cover; border-radius:18px; border:6px solid var(--paper); box-shadow:var(--shadow); }
+  .hero-collage img:nth-child(1){ grid-column:1/9; grid-row:1/9; z-index:1; }
+  .hero-collage img:nth-child(2){ grid-column:6/13; grid-row:1/6; z-index:2; transform:rotate(3deg); }
+  .hero-collage img:nth-child(3){ grid-column:5/11; grid-row:6/11; z-index:3; transform:rotate(-3deg); }
+
+  @media (max-width:980px){
+    .hero{ min-height:0; display:block; padding-block:0; }
+    .hero-grid{ display:block; }
+    .hero-intro{
+      min-height:calc(100vh - 68px);
+      min-height:calc(100svh - 68px);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding-block:clamp(1.5rem,6vh,3rem);
+      text-align:center;
+    }
+    .hero-intro .eyebrow{ margin-bottom:1rem; }
+    .hero h1{
+      margin-bottom:1.1rem;
+      font-size:clamp(3.4rem,12vw,5.2rem);
+      text-align:center;
+      white-space:normal;
+      line-height:1.02;
+    }
+    .hero-description{ margin-bottom:1.25rem; max-width:36ch; }
+    .hero-actions{ width:100%; }
+    .hero-ctas{ justify-content:center; }
+    .hero-content{
+      min-height:100vh;
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      padding-block:clamp(2.75rem,8vw,4rem);
+    }
+    .hero-collage{ width:100%; display:flex; flex-direction:column; height:auto; gap:.9rem; }
+    .hero-collage img{ position:static; transform:none !important; width:100%; aspect-ratio:16/10; }
+  }
+  @media (max-width:600px){
+    .hero-intro{
+      min-height:auto;
+      justify-content:flex-start;
+      padding-block:clamp(1.25rem,3vh,2rem) 1.5rem;
+    }
+    .hero-intro .eyebrow{ margin-bottom:.75rem; }
+    .hero h1{
+      font-size:clamp(3.15rem,14vw,4.4rem);
+      line-height:1;
+      margin-bottom:1.25rem;
+    }
+    .hero-content{
+      min-height:0;
+      align-items:flex-start;
+      padding-block:0 3rem;
+    }
+    .hero-collage{ gap:1rem; }
+  }
+  @media (min-width:981px) and (max-width:1050px){
+    .hero{
+      min-height:calc(100vh - 68px);
+      min-height:calc(100svh - 68px);
+    }
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee{ background:var(--ink); color:var(--cream); overflow:hidden; padding-block:.85rem; }
+  .marquee-track{ display:flex; width:max-content; gap:2.5rem; }
+  .marquee-track span{ display:inline-flex; align-items:center; gap:2.5rem; font-family:var(--font-mono); font-size:.85rem; letter-spacing:.1em; font-weight:600; white-space:nowrap; }
+  .marquee-track .flower{ color:var(--yolk); }
+  @media (prefers-reduced-motion:no-preference){
+    .marquee-track{ animation:marquee 32s linear infinite; }
+    .marquee:hover .marquee-track{ animation-play-state:paused; }
+  }
+  @keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  /* ---------- Section headers ---------- */
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:clamp(2rem,4vw,3rem); flex-wrap:wrap; }
+
+  /* ---------- The Counter (horizontal scroll) ---------- */
+  .case-scroller{ position:relative; }
+  .case-track{
+    display:flex; gap:1.4rem; overflow-x:auto; padding:.5rem .1rem 1.75rem;
+    scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:var(--plum) var(--line);
+  }
+  .case-track::-webkit-scrollbar{ height:8px; }
+  .case-track::-webkit-scrollbar-track{ background:var(--line); border-radius:8px; }
+  .case-track::-webkit-scrollbar-thumb{ background:var(--plum); border-radius:8px; }
+
+  .case-card{ flex:0 0 250px; scroll-snap-align:start; }
+  .case-card figure{ margin:0 0 1.1rem; border-radius:16px; overflow:hidden; aspect-ratio:4/5; box-shadow:var(--shadow-sm); }
+  .case-card img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .case-card:hover img{ transform:scale(1.06); }
+  .case-tag{ padding:.85rem 1rem 1rem; }
+  .case-tag .name{ font-weight:700; font-size:1.02rem; margin-bottom:.2rem; display:block; }
+  .case-tag .note{ font-size:.84rem; color:var(--ink-soft); display:block; margin-bottom:.55rem; }
+  .case-tag .price{ font-family:var(--font-mono); font-weight:600; font-size:.88rem; color:var(--plum); }
+
+  .scroll-controls{ display:flex; gap:.6rem; }
+  .scroll-btn{
+    width:44px; height:44px; border-radius:50%; border:1.5px solid var(--line); background:var(--paper);
+    display:flex; align-items:center; justify-content:center; transition:background-color .18s ease, transform .18s ease;
+  }
+  .scroll-btn:hover{ background:var(--yolk); transform:translateY(-2px); }
+  .scroll-btn svg{ width:18px; height:18px; }
+
+  /* ---------- Trust band ---------- */
+  .trust{ background:var(--plum); color:var(--cream); position:relative; overflow:hidden; }
+  .trust::before,.trust::after{ content:""; position:absolute; border-radius:50%; background:rgba(255,255,255,.05); }
+  .trust::before{ width:420px; height:420px; top:-180px; left:-140px; }
+  .trust::after{ width:340px; height:340px; bottom:-160px; right:-100px; }
+  .trust-grid{ position:relative; display:grid; grid-template-columns:1.2fr .8fr; gap:3rem; align-items:center; }
+  .trust h2{ color:var(--cream); margin-block:1rem 1.1rem; }
+  .trust-actions{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.6rem; }
+  .trust-facts{ display:grid; gap:1.1rem; }
+  .trust-fact{ display:flex; gap:.9rem; align-items:flex-start; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18); border-radius:16px; padding:1.1rem 1.25rem; }
+  .trust-fact .daisy-mark{ margin-top:.15rem; width:1.3rem; height:1.3rem; }
+  .trust-fact strong{ display:block; font-size:.98rem; margin-bottom:.15rem; }
+  .trust-fact span{ font-size:.86rem; color:rgba(255,248,234,.78); }
+  @media (max-width:900px){ .trust-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- Cakes ---------- */
+  .cake-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+  .cake-card{ background:var(--paper); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; transition:transform .25s ease, box-shadow .25s ease; }
+  .cake-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .cake-card figure{ margin:0; aspect-ratio:4/5; overflow:hidden; background:#F4EFE7; }
+  .cake-card img{ width:100%; height:100%; object-fit:cover; }
+  .cake-body{ padding:1.5rem; display:flex; flex-direction:column; gap:.6rem; flex:1; }
+  .cake-body h3{ font-size:1.2rem; }
+  .cake-body p{ font-size:.88rem; color:var(--ink-soft); flex:1; }
+  .cake-price{ display:flex; justify-content:space-between; align-items:center; font-family:var(--font-mono); font-size:.82rem; font-weight:600; color:var(--plum); padding-top:.4rem; border-top:1px dashed var(--line); }
+  .order-note{ margin-top:2.25rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center; justify-content:space-between; background:var(--paper); border:1.5px dashed var(--line); border-radius:16px; padding:1.25rem 1.5rem; }
+  .order-note p{ font-size:.92rem; color:var(--ink-soft); max-width:52ch; }
+  @media (max-width:1000px){ .cake-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .cake-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- Gallery ---------- */
+  .gallery{ background:var(--cream); }
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:210px;
+    grid-auto-flow:dense; gap:1rem;
+  }
+  .gallery-card{ margin:0; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-sm); background:var(--paper); }
+  .gallery-card img{ width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
+  .gallery-card:hover img{ transform:scale(1.04); }
+  .gallery-card--wide{ grid-column:span 2; }
+  .gallery-card--tall{ grid-row:span 2; }
+  @media (max-width:900px){
+    .gallery-grid{ grid-template-columns:repeat(3,1fr); grid-auto-rows:190px; }
+  }
+  @media (max-width:650px){
+    .gallery.section-pad{ padding-block:3rem; }
+    .gallery .section-head{ margin-bottom:1.5rem; }
+    .gallery-grid{
+      display:flex; overflow-x:auto; gap:.9rem; padding:.25rem .1rem 1rem;
+      scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:var(--plum) var(--line);
+      overscroll-behavior-inline:contain; -webkit-overflow-scrolling:touch;
+    }
+    .gallery-grid::-webkit-scrollbar{ height:8px; }
+    .gallery-grid::-webkit-scrollbar-track{ background:var(--line); border-radius:8px; }
+    .gallery-grid::-webkit-scrollbar-thumb{ background:var(--plum); border-radius:8px; }
+    .gallery-card,.gallery-card--wide,.gallery-card--tall{
+      flex:0 0 min(78vw,320px); grid-column:auto; grid-row:auto;
+      aspect-ratio:4/5; scroll-snap-align:start;
+    }
+  }
+  @media (max-width:430px){
+    .gallery-card,.gallery-card--wide,.gallery-card--tall{ flex-basis:82vw; }
+  }
+
+  /* ---------- Reviews ---------- */
+  .reviews{ background:var(--paper); }
+  .reviews .section-head{ align-items:center; }
+  .review-summary{
+    display:flex; align-items:center; gap:1rem;
+    background:var(--cream); border:1.5px solid var(--line); border-radius:16px;
+    padding:.9rem 1.15rem; box-shadow:var(--shadow-sm);
+    transition:transform .18s ease, border-color .18s ease;
+  }
+  .review-summary:hover{ transform:translateY(-2px); border-color:var(--yolk-deep); }
+  .review-stars{ color:var(--yolk-deep); letter-spacing:.08em; font-size:.9rem; white-space:nowrap; }
+  .review-count{ display:block; margin-top:.1rem; color:var(--ink-soft); font-family:var(--font-mono); font-size:.7rem; font-weight:600; letter-spacing:.04em; }
+  .review-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+  .review-card{
+    position:relative; min-height:225px; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;
+    background:var(--cream); border:1.5px solid var(--line); border-radius:var(--radius);
+    padding:1.6rem; box-shadow:var(--shadow-sm);
+  }
+  .review-card::before{
+    content:"\201C"; position:absolute; right:1rem; top:-.6rem;
+    font-family:Georgia,serif; font-size:6rem; line-height:1; color:rgba(110,33,66,.09);
+  }
+  .review-card blockquote{ margin:0; position:relative; z-index:1; }
+  .review-card blockquote p{ margin-top:.8rem; font-family:var(--font-display); font-size:1.2rem; line-height:1.35; font-weight:700; letter-spacing:-.01em; }
+  .review-card footer{ display:flex; align-items:center; gap:.75rem; color:var(--ink-soft); font-size:.82rem; }
+  .review-avatar{
+    width:2.2rem; height:2.2rem; border-radius:50%; flex:none;
+    display:grid; place-items:center; background:var(--plum); color:var(--cream);
+    font-family:var(--font-display); font-weight:800;
+  }
+  .review-source{ display:block; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.05em; color:var(--plum); }
+  @media (max-width:900px){ .review-grid{ grid-template-columns:1fr; } .review-card{ min-height:0; } }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2.5rem,5vw,4.5rem); align-items:start; }
+  .about-photo{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); aspect-ratio:4/5; }
+  .about-photo img{ width:100%; height:100%; object-fit:cover; }
+  .about-copy p{ font-size:1.05rem; color:var(--ink-soft); margin-top:1.2rem; max-width:52ch; }
+  .about-signature{ margin-top:1.75rem; display:flex; align-items:center; gap:.9rem; }
+  .about-signature .line{ font-family:'Bricolage Grotesque', cursive; font-size:1.4rem; font-weight:700; color:var(--plum); }
+  .about-signature small{ display:block; font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); letter-spacing:.05em; }
+  @media (max-width:880px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- Visit ---------- */
+  .visit-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,4vw,3rem); align-items:stretch; }
+  .visit-card{ padding:2rem; display:grid; gap:1.4rem; }
+  .visit-row{ display:flex; gap:1rem; align-items:flex-start; }
+  .visit-row .daisy-mark{ width:1.25rem; height:1.25rem; margin-top:.2rem; }
+  .visit-row strong{ display:block; font-size:1rem; margin-bottom:.15rem; }
+  .visit-row span, .visit-row a{ font-size:.92rem; color:var(--ink-soft); }
+  .visit-hours-table{ width:100%; border-collapse:collapse; font-size:.92rem; }
+  .visit-hours-table td{ padding:.35rem 0; }
+  .visit-hours-table td:last-child{ text-align:right; font-family:var(--font-mono); font-weight:600; }
+  .visit-map{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); position:relative; background:linear-gradient(135deg,var(--plum),var(--plum-deep)); display:flex; align-items:center; justify-content:center; min-height:280px; }
+  .visit-map .daisy-mark{ width:64px; height:64px; color:rgba(255,248,234,.9); }
+  .visit-map .map-cta{ position:absolute; inset:auto 1.5rem 1.5rem auto; }
+  @media (max-width:880px){ .visit-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- Follow ---------- */
+  .follow-head{ text-align:center; max-width:640px; margin-inline:auto; margin-bottom:2.5rem; }
+  .follow-head .eyebrow{ justify-content:center; width:100%; }
+  .follow-head h2{ margin-top:.9rem; }
+  .follow-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:.85rem; }
+  .follow-grid a{ display:block; border-radius:12px; overflow:hidden; aspect-ratio:1; position:relative; }
+  .follow-grid img{ width:100%; height:100%; object-fit:cover; transition:transform .4s ease; }
+  .follow-grid a::after{ content:"♡ View on Instagram"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.05em; color:#fff; background:rgba(110,33,66,.72); opacity:0; transition:opacity .25s ease; text-align:center; padding:.5rem; }
+  .follow-grid a:hover img{ transform:scale(1.08); }
+  .follow-grid a:hover::after{ opacity:1; }
+  .follow-cta{ text-align:center; margin-top:2.25rem; }
+  @media (max-width:820px){ .follow-grid{ grid-template-columns:repeat(3,1fr); } }
+
+  /* ---------- Footer ---------- */
+  .site-footer{ background:var(--ink); color:var(--cream); }
+  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:3rem; padding-block:clamp(3rem,6vw,4.5rem) 2.5rem; }
+  .footer-brand{ display:flex; align-items:center; gap:.65rem; font-family:var(--font-display); font-weight:800; font-size:1.2rem; margin-bottom:.9rem; }
+  .footer-brand .daisy-mark{ width:2rem; height:2rem; color:var(--yolk); }
+  .footer-tag{ color:rgba(255,248,234,.7); font-size:.92rem; max-width:32ch; }
+  .footer-col h4{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--yolk); margin-bottom:1.1rem; font-weight:600; }
+  .footer-col ul{ display:grid; gap:.7rem; }
+  .footer-col a{ font-size:.92rem; color:rgba(255,248,234,.82); transition:color .18s ease; }
+  .footer-col a:hover{ color:var(--yolk); }
+  .footer-bottom{ border-top:1px solid rgba(255,248,234,.14); padding-block:1.4rem; display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; font-size:.78rem; color:rgba(255,248,234,.55); }
+  @media (max-width:760px){ .footer-grid{ grid-template-columns:1fr; gap:2.25rem; } }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <img class="brand-logo" src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/39733logo1.png?fit=max&amp;w=200&amp;auto=format,compress" alt="Little Daisy Bake Shop logo">
+      <span>Little Daisy<small>BAKE SHOP · UPPER MONTCLAIR</small></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="#case">The Counter</a></li>
+        <li><a href="#cakes">Custom Cakes</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#story">Meet the Owner</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+      <span class="hours-chip">TUE–SAT · 8AM–4PM</span>
+      <a class="btn btn-primary btn-sm" data-cms-link="order" href="https://www.thelittledaisybakeshop.com/order-online/" target="_blank" rel="noopener">Order Online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ LANDING ============ -->
+  <section class="hero" aria-labelledby="landing-title">
+    <div class="wrap hero-grid">
+      <div class="hero-intro reveal">
+        <span class="eyebrow">622 Valley Rd · Upper Montclair, NJ</span>
+        <h1 id="landing-title">Fresh from the <em>oven.</em></h1>
+        <p class="lede hero-description">Little Daisy hand-makes cakes, cookies, scones, and crumb cake from scratch, five days a week — in a kitchen that's never let a peanut or tree nut through the door.</p>
+
+        <div class="hero-actions">
+          <div class="hero-ctas">
+            <a class="btn btn-primary" data-cms-link="order" href="https://www.thelittledaisybakeshop.com/order-online/" target="_blank" rel="noopener">Order a Cake</a>
+            <a class="btn btn-outline" href="#case">Browse the Counter</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge"><span class="dot"></span>Voted Best in Essex</span>
+            <span class="badge"><span class="dot"></span>Tree Nut &amp; Peanut Free Facility</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-collage reveal reveal-delay-1">
+          <img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/33200E485DE82-F5C3-4F64-94B6-97472CE289BF.JPG?fit=max&amp;w=1000&amp;auto=format,compress" alt="Inside Little Daisy Bake Shop in Upper Montclair" loading="eager">
+          <img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/58421IMG_2496A9C56A92-1.jpeg?fit=max&amp;w=800&amp;auto=format,compress" alt="Little Daisy Bake Shop neon sign" loading="eager">
+          <img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/43127F3F329CF-D71F-470D-8ECE-5ADA7D9238E2.jpeg?fit=max&amp;w=800&amp;auto=format,compress" alt="An assortment of baked goods from Little Daisy" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span><span class="flower">✿</span>Crumb Cake<span class="flower">✿</span>Daisy Dips<span class="flower">✿</span>Custom Cakes<span class="flower">✿</span>Buttermilk Scones<span class="flower">✿</span>Cinnamon Rolls, Fri–Sat<span class="flower">✿</span>Always Nut-Free<span class="flower">✿</span>Baked From Scratch</span>
+      <span><span class="flower">✿</span>Crumb Cake<span class="flower">✿</span>Daisy Dips<span class="flower">✿</span>Custom Cakes<span class="flower">✿</span>Buttermilk Scones<span class="flower">✿</span>Cinnamon Rolls, Fri–Sat<span class="flower">✿</span>Always Nut-Free<span class="flower">✿</span>Baked From Scratch</span>
+    </div>
+  </div>
+
+  <!-- ============ THE CASE ============ -->
+  <section id="case" class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">The Counter</span>
+          <h2 class="h2" style="margin-top:.7rem;">Something new every time you walk in.</h2>
+          <p class="lede" style="margin-top:.9rem;">Small batches, baked fresh each morning — here's a taste of what tends to disappear first.</p>
+        </div>
+        <div class="scroll-controls">
+          <button class="scroll-btn" data-scroll-target="#case-track" data-dir="prev" aria-label="Scroll case left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="scroll-btn" data-scroll-target="#case-track" data-dir="next" aria-label="Scroll case right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="case-scroller reveal reveal-delay-1">
+        <div class="case-track" id="case-track">
+
+          <article class="case-card">
+            <figure><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&amp;w=700&amp;auto=format,compress" alt="Classic crumb cake from Little Daisy Bake Shop" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Classic Crumb Cake</span>
+              <span class="note">Fridays &amp; Saturdays</span>
+              <span class="price">$5.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-special-crumb-cake.webp" alt="Assorted special crumb cakes with toppings" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Special Crumb Cake</span>
+              <span class="note">Rotating special flavors</span>
+              <span class="price">$6.50</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-classic-cinnamon-rolls.webp" alt="Pan of classic frosted cinnamon rolls" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Classic Cinnamon Rolls</span>
+              <span class="note">Fridays &amp; Saturdays</span>
+              <span class="price">$4.50</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-special-cinnamon-rolls.webp" alt="Cookie-topped special cinnamon rolls" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Special Cinnamon Rolls</span>
+              <span class="note">Rotating special flavors</span>
+              <span class="price">$7.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-daisy-dips.webp" alt="Tray of chocolate-coated Daisy Dips" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Daisy Dips</span>
+              <span class="note">Cake &amp; buttercream, dunked in chocolate</span>
+              <span class="price">$3.00 – $24.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-daisy-dip-cones.webp" alt="Daisy Dip cones decorated with sprinkles" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Daisy Dip Cones</span>
+              <span class="note">A sprinkle-covered twist on Daisy Dips</span>
+              <span class="price">Ask at the counter</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-scones.webp" alt="Chocolate-drizzled and classic scones" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Scones</span>
+              <span class="note">Buttermilk &amp; daily special flavors</span>
+              <span class="price">$2.50 – $3.25</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-pumpkin-bread.webp" alt="Pumpkin bread loaves ready to slice" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Pumpkin &amp; Seasonal Breads</span>
+              <span class="note">By the slice or loaf, while in season</span>
+              <span class="price">$3.00 – $18.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-key-lime-pie.webp" alt="Little Daisy key lime pies with piped cream" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Key Lime Pies</span>
+              <span class="note">Multiple sizes available</span>
+              <span class="price">$12.00 – $35.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-key-lime-pie-slab.webp" alt="Key lime pie slab topped with piped cream" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Key Lime Pie Slab</span>
+              <span class="note">A shareable key lime favorite</span>
+              <span class="price">Ask about availability</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/25187F67AF512-BAA9-4593-A6AA-54E45DD940D0.JPG?fit=max&amp;w=700&amp;auto=format,compress" alt="Assorted Little Daisy cake slices" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Cake by the Slice</span>
+              <span class="note">Ask what’s available today</span>
+              <span class="price">$5.00 – $6.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-coffee-and-espresso.webp" alt="Two Little Daisy coffee drinks" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Coffee &amp; Espresso Drinks</span>
+              <span class="note">Made to order</span>
+              <span class="price">See counter menu</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-custom-cake.webp" alt="Two-tier custom cake with blue trim and strawberries" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Custom Cakes</span>
+              <span class="note">Basic Betty &amp; beyond — <a href="#cakes" style="text-decoration:underline;">see the full lineup</a></span>
+              <span class="price">From $40.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-bars-and-blondies.webp" alt="Assorted bars and blondies" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Bars &amp; Blondies</span>
+              <span class="note">Raspberry squares, Oreo bars &amp; more</span>
+              <span class="price">$3.50 – $4.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-smores-brownie.webp" alt="S'mores brownies with toasted marshmallow layers" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">S’mores Brownies</span>
+              <span class="note">A rotating seasonal bar</span>
+              <span class="price">Ask at the counter</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-banana-bread.webp" alt="Sliced banana bread loaf" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Banana Bread</span>
+              <span class="note">The fan-favorite loaf, no nuts</span>
+              <span class="price">$18.00 loaf</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-cookies.webp" alt="Stacks of fresh Little Daisy cookies" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Cookies</span>
+              <span class="note">Chocolate chip, snickerdoodle, sprinkle</span>
+              <span class="price">$3.00 – $3.75</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/counter-decorated-sugar-cookies.webp" alt="Seasonal hand-decorated sugar cookies" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Seasonal Decorated Sugar Cookies</span>
+              <span class="note">Hand-decorated designs change with the season</span>
+              <span class="price">$5.00</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <figure><img src="/images/gallery-cupcakes.webp" alt="Vanilla and chocolate Little Daisy cupcakes" loading="lazy"></figure>
+            <div class="case-tag ticket">
+              <span class="name">Cupcakes</span>
+              <span class="note">Chocolate, vanilla, red velvet, Hostess</span>
+              <span class="price">$3.00 – $4.50</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAND ============ -->
+  <div class="scallop scallop--to-plum"></div>
+  <section class="trust section-pad on-plum">
+    <div class="wrap trust-grid">
+      <div class="reveal">
+        <span class="eyebrow">The Kitchen</span>
+        <h2 class="h2">A kitchen that's never touched a peanut or tree nut.</h2>
+        <p class="lede">Every cake, cookie, and cupcake is baked on-site — no peanuts, no tree nuts, no substitutions. If allergies are part of the celebration, give us a call and we'll walk you through exactly what's in everything we make.</p>
+        <div class="trust-actions">
+          <a class="btn btn-primary" data-cms-link="phone" href="tel:9737072157">Call (973) 707-2157</a>
+          <a class="btn btn-outline on-plum" href="#story">Meet the owner</a>
+        </div>
+      </div>
+      <div class="trust-facts reveal reveal-delay-1">
+        <div class="trust-fact">
+          <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+          <div><strong>Baked from scratch</strong><span>Real butter, real eggs, real buttermilk — no shortcuts.</span></div>
+        </div>
+        <div class="trust-fact">
+          <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+          <div><strong>Small batches, daily</strong><span>Tuesday through Saturday, so everything's actually fresh.</span></div>
+        </div>
+        <div class="trust-fact">
+          <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+          <div><strong>Ask us anything</strong><span>Call ahead and we'll talk through every ingredient with you.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="scallop scallop--to-cream"></div>
+
+  <!-- ============ CAKES ============ -->
+  <section id="cakes" class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Custom Cakes</span>
+          <h2 class="h2" style="margin-top:.7rem;">From Basic Betty to Unicorn.</h2>
+          <p class="lede" style="margin-top:.9rem;">Cakes filled and frosted “just for you.”</p>
+        </div>
+      </div>
+
+      <div class="cake-grid reveal reveal-delay-1">
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-basic-betty.webp" alt="Basic Betty cake with white buttercream and confetti trim" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Basic Betty</h3>
+            <p>Chocolate or vanilla cake, filled and frosted in vanilla buttercream, with a simple trim and sprinkles.</p>
+            <div class="cake-price"><span>6&Prime; feeds 6–10</span><span>$40 / $75</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-chocolate-lover.webp" alt="Chocolate Lover cake with chocolate drip and chocolate decorations" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Chocolate Lover</h3>
+            <p>Layers of chocolate cake, ganache filling, and chocolate buttercream, finished with a drip on top.</p>
+            <div class="cake-price"><span>6&Prime; / 9&Prime;</span><span>$50 / $90</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-party.webp" alt="Party Cake with confetti sprinkles and buttercream dollops" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Party Cake</h3>
+            <p>Funfetti cake with vanilla buttercream filling and frosting, confetti sprinkles, and dollops on top.</p>
+            <div class="cake-price"><span>6&Prime; / 9&Prime;</span><span>$45 / $80</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-simple-celebration.webp" alt="Two-tier Simple Celebration cake with smooth white buttercream" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Simple Celebration</h3>
+            <p>A two-tier cake with your choice of cake and buttercream, finished in a simple, elegant style.</p>
+            <div class="cake-price"><span>Feeds 25–30</span><span>$130</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-special-celebration.webp" alt="Two-tier Special Celebration cake with chocolate drip and confetti sprinkles" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Special Celebration</h3>
+            <p>A two-tier cake with vanilla buttercream, a chocolate drip, and confetti sprinkles on the sides.</p>
+            <div class="cake-price"><span>Feeds 25–30</span><span>$160</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-sprinkle.webp" alt="Sprinkle Cake with a rainbow sprinkle coating and a cut slice" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Sprinkle Cake</h3>
+            <p>Chocolate or vanilla cake with vanilla buttercream, covered from top to bottom in rainbow sprinkles.</p>
+            <div class="cake-price"><span>6&Prime; / 9&Prime;</span><span>$50 / $85</span></div>
+          </div>
+        </div>
+
+        <div class="cake-card">
+          <figure><img src="/images/cake-unicorn.webp" alt="Pastel Unicorn cake with buttercream flowers and a gold horn" loading="lazy"></figure>
+          <div class="cake-body">
+            <h3>Unicorn Cake</h3>
+            <p>A magical cake with pastel buttercream flowers, ears, eyelashes, and a sparkling horn.</p>
+            <div class="cake-price"><span>6&Prime; / tiered</span><span>$85 / $200</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="order-note reveal reveal-delay-2">
+        <p>Orders can be placed until 11am the day before pickup — by Thursday at 11am for Saturday pickup. Cancellations need 48 hours' notice.</p>
+        <a class="btn btn-primary" data-cms-link="order" href="https://www.thelittledaisybakeshop.com/order-online/" target="_blank" rel="noopener">Start Your Cake Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" class="reviews section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Google Reviews</span>
+          <h2 class="h2" style="margin-top:.7rem;">A little love from the neighborhood.</h2>
+          <p class="lede" style="margin-top:.9rem;">Five-star notes from people who trusted Little Daisy with the sweetest part of their celebrations.</p>
+        </div>
+        <a class="review-summary" data-cms-link="maps" href="https://maps.google.com/?cid=3087489336073391528" target="_blank" rel="noopener" aria-label="Read more Google reviews for Little Daisy Bake Shop">
+          <span>
+            <span class="review-stars" aria-label="Featured reviews rated 5 out of 5 stars">★★★★★</span>
+            <span class="review-count">READ MORE ON GOOGLE ↗</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="review-grid reveal reveal-delay-1">
+        <article class="review-card">
+          <blockquote>
+            <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <p>“It was gorgeous and delicious. Everyone raved about this cake.”</p>
+          </blockquote>
+          <footer>
+            <span class="review-avatar" aria-hidden="true">C</span>
+            <span><strong>Carolyn O</strong><span class="review-source">GOOGLE REVIEW</span></span>
+          </footer>
+        </article>
+
+        <article class="review-card">
+          <blockquote>
+            <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <p>“The cake also tasted AWESOME.”</p>
+          </blockquote>
+          <footer>
+            <span class="review-avatar" aria-hidden="true">M</span>
+            <span><strong>Margaret</strong><span class="review-source">GOOGLE REVIEW</span></span>
+          </footer>
+        </article>
+
+        <article class="review-card">
+          <blockquote>
+            <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <p>“I loved my cake so much and it tasted amazing!”</p>
+          </blockquote>
+          <footer>
+            <span class="review-avatar" aria-hidden="true">E</span>
+            <span><strong>Eva Lorraine</strong><span class="review-source">GOOGLE REVIEW</span></span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery" class="gallery section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Little Daisy Gallery</span>
+          <h2 class="h2" style="margin-top:.7rem;">A peek inside the bake shop.</h2>
+          <p class="lede" style="margin-top:.9rem;">Celebrations, counter favorites, and a little behind-the-scenes sweetness.</p>
+        </div>
+      </div>
+
+      <div class="gallery-grid reveal reveal-delay-1">
+        <figure class="gallery-card gallery-card--wide"><img src="/images/gallery-neon-cake-counter.webp" alt="Little Daisy neon sign glowing above a display of cakes" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--tall"><img src="/images/gallery-decorated-cookies.webp" alt="Colorful hand-decorated celebration cookies" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-celebration-cookies.webp" alt="Three oversized celebration cookies on a plate" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--tall"><img src="/images/gallery-heart-cake.webp" alt="Heart-decorated cake surrounded by matching cupcakes" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-birthday-cupcake.webp" alt="Birthday celebration with a cupcake and confetti" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-cake-sign.webp" alt="Have your cake and eat it too sign with confetti" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-shop-art.webp" alt="Colorful umbrella artwork at Little Daisy" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-cupcakes.webp" alt="Vanilla and chocolate cupcakes with rainbow sprinkles" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--tall"><img src="/images/gallery-boxed-cupcakes.webp" alt="Fresh cupcakes packed in bakery boxes" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--wide"><img src="/images/gallery-baking-ingredients.webp" alt="Baking ingredients arranged on a floral tablecloth" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-latte.webp" alt="A flower-topped latte on a wooden counter" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--tall"><img src="/images/gallery-storefront-sign.webp" alt="Little Daisy Bake Shop storefront and neon sign" loading="lazy"></figure>
+        <figure class="gallery-card gallery-card--wide"><img src="/images/gallery-assorted-bars.webp" alt="An assortment of Little Daisy bars and blondies" loading="lazy"></figure>
+        <figure class="gallery-card"><img src="/images/gallery-winter-cookies.webp" alt="Winter-themed decorated sugar cookies" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="story" class="section-pad" style="background:var(--paper);">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal">
+        <img src="/images/owner-jennifer-snyder.webp" alt="Jennifer Snyder, owner of Little Daisy Bake Shop" loading="lazy">
+      </div>
+      <div class="about-copy reveal reveal-delay-1">
+        <span class="eyebrow">Meet the Owner</span>
+        <h2 class="h2" style="margin-top:.7rem;">Jennifer Snyder</h2>
+        <p>Jennifer Snyder’s career began with internet startups in 1990s Seattle before she moved into public relations for Chicago’s high-end chef and restaurant scene. She continued her public relations work in New York City before settling in Montclair. A lifelong baker, Snyder began baking for friends and family, and it quickly blossomed into the opening of The Little Daisy Bake Shop in 2011. Her mission was simple: bake everything from scratch — no boxes or mixes — and offer treats that tasted like they came straight from Mom’s oven.</p>
+        <p>The first location, at 626 Valley Road, was a kitchen space about as big as a closet. Snyder’s small team served nut- and peanut-free desserts that quickly gained local attention and earned the title of Best Boutique Bakery in Essex County. After less than two years, Little Daisy moved a few doors down to a space more than three times as big. Snyder’s philosophy of using real ingredients and baking fresh continues to shine through every product and in the bakery’s continued success.</p>
+        <p>Snyder also believes strongly in giving back to the community. Little Daisy has supported schools, churches, sports, arts and music programs, and many local nonprofit organizations. The shop has been the Official Bakery of the Montclair Film Festival for more than a decade.</p>
+        <p>Snyder’s favorite Little Daisy menu items are crumb cake and chocolate chip cookies. She and her family live in Montclair with their two Labradors, Daisy and Wrigley.</p>
+        <div class="about-signature">
+          <span class="line">Jennifer Snyder</span>
+          <small>Owner &amp; Baker</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section id="visit" class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Visit</span>
+          <h2 class="h2" style="margin-top:.7rem;">Stop by Uptown.</h2>
+        </div>
+      </div>
+
+      <div class="visit-grid reveal reveal-delay-1">
+        <div class="ticket visit-card">
+          <div class="visit-row">
+            <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+            <div>
+              <strong>622 Valley Rd</strong>
+              <span>Upper Montclair, NJ 07043</span>
+            </div>
+          </div>
+          <div class="visit-row">
+            <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+            <div>
+              <strong>Call</strong>
+              <a data-cms-link="phone" href="tel:9737072157">(973) 707-2157</a>
+            </div>
+          </div>
+          <div class="visit-row" style="align-items:flex-start;">
+            <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+            <div style="flex:1;">
+              <strong style="margin-bottom:.5rem;">Hours</strong>
+              <table class="visit-hours-table">
+                <tr><td>Tuesday – Saturday</td><td>8am – 4pm</td></tr>
+                <tr><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-map">
+          <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(45 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(90 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(135 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(180 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(225 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(270 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(315 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#FFF8EA"/></svg>
+          <a class="btn btn-primary map-cta" data-cms-link="maps" href="https://maps.google.com/?cid=3087489336073391528" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOLLOW ============ -->
+  <section class="section-pad" style="background:var(--paper);">
+    <div class="wrap">
+      <div class="follow-head reveal">
+        <span class="eyebrow">Follow Along</span>
+        <h2 class="h2">@littledaisybakeshop</h2>
+      </div>
+      <div class="follow-grid reveal reveal-delay-1">
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/75392A79391B7-C5FB-4CCD-A5F2-0E01B3C50D3F.JPG?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/18350IMG_1247.jpeg?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/14999FD8F0CF7-5B6C-43F5-AA7F-37237C60E1B6.JPG?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/547902091A72C-DB56-4DC7-847C-2836C7D39389.JPG?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+        <a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener"><img src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/8030247E8D8F7-1FC8-476B-8451-D5173D083EBC.JPG?fit=max&amp;w=500&amp;auto=format,compress" alt="Little Daisy Bake Shop Instagram photo" loading="lazy"></a>
+      </div>
+      <div class="follow-cta reveal reveal-delay-2">
+        <a class="btn btn-outline" data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<div class="scallop scallop--cream-to-ink"></div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg class="daisy-mark" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="9" rx="4.2" ry="8.5"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(45 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(90 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(135 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(180 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(225 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(270 20 20)"/><ellipse cx="20" cy="9" rx="4.2" ry="8.5" transform="rotate(315 20 20)"/></g><circle cx="20" cy="20" r="5.5" fill="#F5B324"/></svg>
+        <span class="footer-brand-name">Little Daisy</span>
+      </div>
+      <p class="footer-tag">A nut &amp; peanut-free scratch bakery in Upper Montclair, NJ. Cakes, cookies, cupcakes, and crumb cake, baked fresh five days a week.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#case">The Counter</a></li>
+        <li><a href="#cakes">Custom Cakes</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#story">Meet the Owner</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a data-cms-link="phone" href="tel:9737072157">(973) 707-2157</a></li>
+        <li><a data-cms-link="instagram" href="https://www.instagram.com/littledaisybakeshop/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a data-cms-link="facebook" href="https://www.facebook.com/TheLittleDaisyBakeShop/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a data-cms-link="order" href="https://www.thelittledaisybakeshop.com/order-online/" target="_blank" rel="noopener">Order Online</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>The Little Daisy Bake Shop · 622 Valley Rd, Upper Montclair, NJ 07043</span>
+    <span>Design concept</span>
+  </div>
+</footer>
+
+<!-- CMS_DATA -->
+<script src="/cms.js"></script>
+<script>
+(function(){
+  var navToggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.nav');
+  if(navToggle && nav){
+    var mobileNav = window.matchMedia('(max-width: 1050px)');
+    function setNavOpen(open){
+      nav.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('nav-open', open && mobileNav.matches);
+    }
+    navToggle.addEventListener('click', function(){
+      setNavOpen(!nav.classList.contains('is-open'));
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        setNavOpen(false);
+      });
+    });
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape' && nav.classList.contains('is-open')){
+        setNavOpen(false);
+        navToggle.focus();
+      }
+    });
+    function handleNavBreakpoint(event){
+      if(!event.matches){ setNavOpen(false); }
+    }
+    if(mobileNav.addEventListener){ mobileNav.addEventListener('change', handleNavBreakpoint); }
+    else if(mobileNav.addListener){ mobileNav.addListener(handleNavBreakpoint); }
+  }
+
+  var header = document.querySelector('.site-header');
+  function onScroll(){
+    if(window.scrollY > 12){ header.classList.add('is-scrolled'); }
+    else { header.classList.remove('is-scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  document.querySelectorAll('[data-scroll-target]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var track = document.querySelector(btn.getAttribute('data-scroll-target'));
+      if(!track) return;
+      var amount = track.clientWidth * 0.8 * (btn.dataset.dir === 'prev' ? -1 : 1);
+      track.scrollBy({ left: amount, behavior: 'smooth' });
+    });
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && revealEls.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
