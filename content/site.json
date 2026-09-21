@@ -16,7 +16,7 @@
     "hours_chip": "TUE–SAT · 8AM–4PM"
   },
   "hero": {
-    "eyebrow": "622 Valley Rd · Upper Montclair, NJ",
+    "eyebrow": "622 Valley Rd · Upper Montclair",
     "title": "Fresh from the",
     "title_emphasis": "oven.",
     "description": "Little Daisy hand-makes cakes, cookies, scones, and crumb cake from scratch, five days a week — in a kitchen that's never let a peanut or tree nut through the door.",
@@ -306,20 +306,76 @@
     "title": "A peek inside the bake shop.",
     "description": "Celebrations, counter favorites, and a little behind-the-scenes sweetness.",
     "images": [
-      { "image": "/images/gallery-neon-cake-counter.webp", "alt": "Little Daisy neon sign glowing above a display of cakes", "layout": "wide" },
-      { "image": "/images/gallery-decorated-cookies.webp", "alt": "Colorful hand-decorated celebration cookies", "layout": "tall" },
-      { "image": "/images/gallery-celebration-cookies.webp", "alt": "Three oversized celebration cookies on a plate", "layout": "standard" },
-      { "image": "/images/gallery-heart-cake.webp", "alt": "Heart-decorated cake surrounded by matching cupcakes", "layout": "tall" },
-      { "image": "/images/gallery-birthday-cupcake.webp", "alt": "Birthday celebration with a cupcake and confetti", "layout": "standard" },
-      { "image": "/images/gallery-cake-sign.webp", "alt": "Have your cake and eat it too sign with confetti", "layout": "standard" },
-      { "image": "/images/gallery-shop-art.webp", "alt": "Colorful umbrella artwork at Little Daisy", "layout": "standard" },
-      { "image": "/images/gallery-cupcakes.webp", "alt": "Vanilla and chocolate cupcakes with rainbow sprinkles", "layout": "standard" },
-      { "image": "/images/gallery-boxed-cupcakes.webp", "alt": "Fresh cupcakes packed in bakery boxes", "layout": "tall" },
-      { "image": "/images/gallery-baking-ingredients.webp", "alt": "Baking ingredients arranged on a floral tablecloth", "layout": "wide" },
-      { "image": "/images/gallery-latte.webp", "alt": "A flower-topped latte on a wooden counter", "layout": "standard" },
-      { "image": "/images/gallery-storefront-sign.webp", "alt": "Little Daisy Bake Shop storefront and neon sign", "layout": "tall" },
-      { "image": "/images/gallery-assorted-bars.webp", "alt": "An assortment of Little Daisy bars and blondies", "layout": "wide" },
-      { "image": "/images/gallery-winter-cookies.webp", "alt": "Winter-themed decorated sugar cookies", "layout": "standard" }
+      {
+        "image": "/images/gallery-neon-cake-counter.webp",
+        "alt": "Little Daisy neon sign glowing above a display of cakes",
+        "layout": "wide"
+      },
+      {
+        "image": "/images/gallery-decorated-cookies.webp",
+        "alt": "Colorful hand-decorated celebration cookies",
+        "layout": "tall"
+      },
+      {
+        "image": "/images/gallery-celebration-cookies.webp",
+        "alt": "Three oversized celebration cookies on a plate",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-heart-cake.webp",
+        "alt": "Heart-decorated cake surrounded by matching cupcakes",
+        "layout": "tall"
+      },
+      {
+        "image": "/images/gallery-birthday-cupcake.webp",
+        "alt": "Birthday celebration with a cupcake and confetti",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-cake-sign.webp",
+        "alt": "Have your cake and eat it too sign with confetti",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-shop-art.webp",
+        "alt": "Colorful umbrella artwork at Little Daisy",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-cupcakes.webp",
+        "alt": "Vanilla and chocolate cupcakes with rainbow sprinkles",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-boxed-cupcakes.webp",
+        "alt": "Fresh cupcakes packed in bakery boxes",
+        "layout": "tall"
+      },
+      {
+        "image": "/images/gallery-baking-ingredients.webp",
+        "alt": "Baking ingredients arranged on a floral tablecloth",
+        "layout": "wide"
+      },
+      {
+        "image": "/images/gallery-latte.webp",
+        "alt": "A flower-topped latte on a wooden counter",
+        "layout": "standard"
+      },
+      {
+        "image": "/images/gallery-storefront-sign.webp",
+        "alt": "Little Daisy Bake Shop storefront and neon sign",
+        "layout": "tall"
+      },
+      {
+        "image": "/images/gallery-assorted-bars.webp",
+        "alt": "An assortment of Little Daisy bars and blondies",
+        "layout": "wide"
+      },
+      {
+        "image": "/images/gallery-winter-cookies.webp",
+        "alt": "Winter-themed decorated sugar cookies",
+        "layout": "standard"
+      }
     ]
   },
   "owner": {
@@ -342,8 +398,14 @@
     "address_line_1": "622 Valley Rd",
     "address_line_2": "Upper Montclair, NJ 07043",
     "hours": [
-      { "days": "Tuesday – Saturday", "time": "8am – 4pm" },
-      { "days": "Sunday & Monday", "time": "Closed" }
+      {
+        "days": "Tuesday – Saturday",
+        "time": "8am – 4pm"
+      },
+      {
+        "days": "Sunday & Monday",
+        "time": "Closed"
+      }
     ],
     "directions_button": "Get Directions"
   },
@@ -352,12 +414,30 @@
     "handle": "@littledaisybakeshop",
     "button": "Follow on Instagram",
     "images": [
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/75392A79391B7-C5FB-4CCD-A5F2-0E01B3C50D3F.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/18350IMG_1247.jpeg?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/14999FD8F0CF7-5B6C-43F5-AA7F-37237C60E1B6.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/547902091A72C-DB56-4DC7-847C-2836C7D39389.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" },
-      { "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/8030247E8D8F7-1FC8-476B-8451-D5173D083EBC.JPG?fit=max&w=500&auto=format,compress", "alt": "Little Daisy Bake Shop Instagram photo" }
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/75392A79391B7-C5FB-4CCD-A5F2-0E01B3C50D3F.JPG?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/18350IMG_1247.jpeg?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/14999FD8F0CF7-5B6C-43F5-AA7F-37237C60E1B6.JPG?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/547902091A72C-DB56-4DC7-847C-2836C7D39389.JPG?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/74646littledaisy.jpeg?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      },
+      {
+        "image": "https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/8030247E8D8F7-1FC8-476B-8451-D5173D083EBC.JPG?fit=max&w=500&auto=format,compress",
+        "alt": "Little Daisy Bake Shop Instagram photo"
+      }
     ]
   },
   "footer": {
