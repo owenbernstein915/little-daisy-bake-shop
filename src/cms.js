@@ -63,7 +63,7 @@
   var heroBadges = document.querySelector('.hero-badges');
   if (heroBadges) {
     heroBadges.innerHTML = data.hero.badges.map(function (badge) {
-      return '<span class="badge"><span class="dot"></span>' + escapeHtml(badge) + '</span>';
+      return '<span class="badge">' + escapeHtml(badge) + '</span>';
     }).join('');
   }
   var heroCollage = document.querySelector('.hero-collage');
