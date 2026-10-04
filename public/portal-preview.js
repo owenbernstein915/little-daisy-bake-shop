@@ -4,6 +4,7 @@
   var siteId = 'little-daisy';
   var parentOrigin = null;
   var observer = null;
+  var previewInteractionsActive = false;
 
   function isPortalOrigin(origin) {
     try {
@@ -61,13 +62,18 @@
     parentOrigin = origin;
     document.documentElement.classList.add('owen-portal-preview-mode');
     addStyles(); addPencils();
+    if (!previewInteractionsActive) {
+      document.addEventListener('click', blockPreviewNavigation, true);
+      document.addEventListener('submit', blockPreviewSubmission, true);
+      previewInteractionsActive = true;
+    }
     if (!observer && document.body) {
       observer = new MutationObserver(addPencils);
       observer.observe(document.body, { childList: true, subtree: true });
     }
   }
 
-  document.addEventListener('click', function (event) {
+  function blockPreviewNavigation(event) {
     if (event.target.closest('[data-portal-edit-button]')) return;
     var link = event.target.closest('a[href]');
     if (!link) return;
@@ -78,14 +84,16 @@
     }
     destination.searchParams.set('portalEditor', '1');
     link.href = destination.href;
-  }, true);
-  document.addEventListener('submit', function (event) { event.preventDefault(); event.stopImmediatePropagation(); }, true);
+  }
+
+  function blockPreviewSubmission(event) { event.preventDefault(); event.stopImmediatePropagation(); }
 
   window.addEventListener('message', function (event) {
     if (event.source !== window.parent || !isPortalOrigin(event.origin)) return;
     var message = event.data;
     if (!message || message.siteId !== siteId) return;
     if (message.type === 'owen-portal:init') {
+      if (!message.content || !message.content.website) return;
       activate(event.origin);
       window.__OWEN_PORTAL_PREVIEW__?.apply(message);
     } else if (message.type === 'owen-portal:update' && parentOrigin === event.origin) {
