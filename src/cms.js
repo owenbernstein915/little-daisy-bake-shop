@@ -34,6 +34,8 @@
     return '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.alt) + '" loading="' + loading + '">';
   }
 
+  function renderContent(nextData) {
+  data = nextData;
   document.title = data.site.seo_title;
   var description = document.querySelector('meta[name="description"]');
   if (description) description.setAttribute('content', data.site.seo_description);
@@ -142,7 +144,14 @@
   }
   setText('.about-copy .eyebrow', data.owner.eyebrow);
   setText('.about-copy .h2', data.owner.name);
-  var ownerParagraphs = document.querySelectorAll('.about-copy > p');
+  var ownerCopy = document.querySelector('.about-copy');
+  var ownerSignature = document.querySelector('.about-signature');
+  var ownerParagraphs = ownerCopy ? Array.prototype.slice.call(ownerCopy.querySelectorAll(':scope > p:not(.eyebrow)')) : [];
+  while (ownerCopy && ownerSignature && ownerParagraphs.length < data.owner.paragraphs.length) {
+    var paragraph = document.createElement('p');
+    ownerCopy.insertBefore(paragraph, ownerSignature);
+    ownerParagraphs.push(paragraph);
+  }
   ownerParagraphs.forEach(function (node, index) {
     if (data.owner.paragraphs[index] != null) node.textContent = data.owner.paragraphs[index];
     else node.remove();
@@ -181,4 +190,29 @@
   var footerBottom = document.querySelectorAll('.footer-bottom span');
   if (footerBottom[0]) footerBottom[0].textContent = data.footer.bottom_line;
   if (footerBottom[1]) footerBottom[1].textContent = data.footer.credit;
+  }
+
+  renderContent(data);
+
+  if (window.parent !== window && new URLSearchParams(window.location.search).get('portalEditor') === '1') {
+    function replacePreviewImages(value, overrides) {
+      if (typeof value === 'string') return overrides[value] || value;
+      if (Array.isArray(value)) return value.map(function (item) { return replacePreviewImages(item, overrides); });
+      if (value && typeof value === 'object') {
+        var result = {};
+        Object.keys(value).forEach(function (key) { result[key] = replacePreviewImages(value[key], overrides); });
+        return result;
+      }
+      return value;
+    }
+    window.__OWEN_PORTAL_PREVIEW__ = {
+      apply: function (message) {
+        if (!message || !message.content || !message.content.website) return;
+        renderContent(replacePreviewImages(message.content.website, message.imageOverrides || {}));
+      },
+    };
+    var portalBridge = document.createElement('script');
+    portalBridge.src = '/portal-preview.js';
+    document.head.appendChild(portalBridge);
+  }
 })();
