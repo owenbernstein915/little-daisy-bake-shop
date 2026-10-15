@@ -7,7 +7,7 @@
     "logo_alt": "Little Daisy Bake Shop logo",
     "seo_title": "Little Daisy Bake Shop | Upper Montclair, NJ",
     "seo_description": "Scratch-baked cakes, cookies, and crumb cake from a nut-free kitchen in Upper Montclair, NJ.",
-    "order_url": "https://www.thelittledaisybakeshop.com/order-online/",
+    "order_url": "https://thelittledaisybakeshop.getbento.com/catering-store-v2/little-daisy-bake-shop/menu/order-settings",
     "instagram_url": "https://www.instagram.com/littledaisybakeshop/",
     "facebook_url": "https://www.facebook.com/TheLittleDaisyBakeShop/",
     "google_maps_url": "https://maps.google.com/?cid=3087489336073391528",
@@ -66,7 +66,7 @@
         "name": "Special Crumb Cake",
         "note": "Rotating special flavors",
         "price": "$6.50",
-        "image": "/images/counter-special-crumb-cake.webp",
+        "image": "/images/uploads/9ca5b345-0983-41bf-9d52-3a4419911d12.webp",
         "alt": "Assorted special crumb cakes with toppings"
       },
       {
