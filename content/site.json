@@ -16,7 +16,7 @@
     "hours_chip": "TUE–SAT · 8AM–4PM"
   },
   "hero": {
-    "eyebrow": "622 Valley Rd · Upper Montclair",
+    "eyebrow": "622 Valley Rd · Upper Montclair, NJ",
     "title": "Fresh from the",
     "title_emphasis": "oven.",
     "description": "Little Daisy hand-makes cakes, cookies, scones, and crumb cake from scratch, five days a week — in a kitchen that's never let a peanut or tree nut through the door.",
@@ -66,7 +66,7 @@
         "name": "Special Crumb Cake",
         "note": "Rotating special flavors",
         "price": "$6.50",
-        "image": "/images/counter-special-crumb-cake.webp",
+        "image": "/images/uploads/9ca5b345-0983-41bf-9d52-3a4419911d12.webp",
         "alt": "Assorted special crumb cakes with toppings"
       },
       {
@@ -180,7 +180,7 @@
         "name": "Seasonal Decorated Sugar Cookies",
         "note": "Hand-decorated designs change with the season",
         "price": "$5.00",
-        "image": "/images/counter-decorated-sugar-cookies.webp",
+        "image": "/images/uploads/200fa4fa-42dd-4054-a399-fc4309941179.webp",
         "alt": "Seasonal hand-decorated sugar cookies"
       },
       {
