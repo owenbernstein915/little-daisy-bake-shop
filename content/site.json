@@ -230,7 +230,7 @@
         "name": "Chocolate Lover",
         "description": "Layers of chocolate cake, ganache filling, and chocolate buttercream, finished with a drip on top.",
         "size": "6″ / 9″",
-        "price": "$50 / $90",
+        "price": "$60 / $100",
         "image": "/images/cake-chocolate-lover.webp",
         "alt": "Chocolate Lover cake with chocolate drip and chocolate decorations"
       },
@@ -238,7 +238,7 @@
         "name": "Party Cake",
         "description": "Funfetti cake with vanilla buttercream filling and frosting, confetti sprinkles, and dollops on top.",
         "size": "6″ / 9″",
-        "price": "$45 / $80",
+        "price": "$55 / $90",
         "image": "/images/cake-party.webp",
         "alt": "Party Cake with confetti sprinkles and buttercream dollops"
       },
@@ -254,7 +254,7 @@
         "name": "Special Celebration",
         "description": "A two-tier cake with vanilla buttercream, a chocolate drip, and confetti sprinkles on the sides.",
         "size": "Feeds 25–30",
-        "price": "$160",
+        "price": "$175",
         "image": "/images/cake-special-celebration.webp",
         "alt": "Two-tier Special Celebration cake with chocolate drip and confetti sprinkles"
       },
@@ -262,7 +262,7 @@
         "name": "Sprinkle Cake",
         "description": "Chocolate or vanilla cake with vanilla buttercream, covered from top to bottom in rainbow sprinkles.",
         "size": "6″ / 9″",
-        "price": "$50 / $85",
+        "price": "$60 / $95",
         "image": "/images/uploads/0d2c1714-9ecd-4976-a62d-1dd3f1dc9d37.webp",
         "alt": "Sprinkle Cake with a rainbow sprinkle coating and a cut slice"
       },

@@ -1,9 +1,7 @@
 {
   "version": 1,
-  "baseMainSha": "3f182cc9c0cd89c3fe92f59a8785a36b2479634a",
-  "fingerprint": "5189c3d610919a858e40ec44efb10f79fba24f32c38cd3ede5866f0e477ac105",
-  "savedAt": "2026-10-28T13:36:03.228Z",
-  "uploads": [
-    "public/images/uploads/0d2c1714-9ecd-4976-a62d-1dd3f1dc9d37.webp"
-  ]
+  "baseMainSha": "99bee471fe9569449a51dced0eb51389dea6b656",
+  "fingerprint": "ceb374344a1b382a379102e599f394abbedddd0aead2ca03008d315358ca6c8f",
+  "savedAt": "2026-10-28T13:42:25.927Z",
+  "uploads": []
 }
