@@ -189,7 +189,7 @@
   setText('.footer-tag', data.footer.tagline);
   var footerBottom = document.querySelectorAll('.footer-bottom span');
   if (footerBottom[0]) footerBottom[0].textContent = data.footer.bottom_line;
-  if (footerBottom[1]) footerBottom[1].textContent = data.footer.credit;
+  setText('.site-credit a', data.footer.credit);
   }
 
   renderContent(data);
