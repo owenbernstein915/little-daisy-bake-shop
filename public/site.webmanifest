@@ -1,0 +1,22 @@
+{
+  "name": "Little Daisy Bake Shop",
+  "short_name": "Little Daisy Bake Shop",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFF8EA",
+  "theme_color": "#6E2142",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
