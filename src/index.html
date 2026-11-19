@@ -9,6 +9,7 @@
 <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="/site.webmanifest">
+<!-- PAGE_STYLES -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Parisienne&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
@@ -166,7 +167,8 @@
   .nav-links{ display:flex; align-items:center; flex-wrap:nowrap; gap:clamp(.9rem,1.5vw,1.45rem); }
   .nav-links a{ display:block; font-weight:600; font-size:.9rem; line-height:1.2; white-space:nowrap; position:relative; padding-block:.45rem; }
   .nav-links a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:2px; background:var(--plum); transition:right .22s ease; }
-  .nav-links a:hover::after{ right:0; }
+  .nav-links a:hover::after, .nav-links a[aria-current="page"]::after{ right:0; }
+  .nav-links a[aria-current="page"]{ color:var(--plum); }
 
   .hours-chip{
     font-family:var(--font-mono); font-size:.72rem; font-weight:600; letter-spacing:.06em;
@@ -453,6 +455,7 @@
   .about-signature{ margin-top:1.75rem; display:flex; align-items:center; gap:.9rem; }
   .about-signature .line{ font-family:'Bricolage Grotesque', cursive; font-size:1.4rem; font-weight:700; color:var(--plum); }
   .about-signature small{ display:block; font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); letter-spacing:.05em; }
+  .about-team-link{ margin-top:1.5rem; }
   @media (max-width:880px){ .about-grid{ grid-template-columns:1fr; } }
 
   /* ---------- Visit ---------- */
@@ -505,7 +508,7 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" data-portal-edit-path='["website","site"]' data-portal-edit-label="Business details and links">
   <div class="wrap header-inner">
-    <a href="#top" class="brand">
+    <a href="/#top" class="brand">
       <img class="brand-logo" src="https://images.getbento.com/accounts/7ad639aa16c1661f06ea15bef089a94b/media/images/39733logo1.png?fit=max&amp;w=200&amp;auto=format,compress" alt="Little Daisy Bake Shop logo">
       <span>Little Daisy<small>BAKE SHOP · UPPER MONTCLAIR</small></span>
     </a>
@@ -516,12 +519,13 @@
 
     <nav class="nav" id="site-nav" aria-label="Primary navigation">
       <ul class="nav-links">
-        <li><a href="#case">The Counter</a></li>
-        <li><a href="#cakes">Custom Cakes</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#story">Meet the Owner</a></li>
-        <li><a href="#visit">Visit</a></li>
+        <li><a href="/#case">The Counter</a></li>
+        <li><a href="/#cakes">Custom Cakes</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#story">Meet the Owner</a></li>
+        <li><a href="/team/"{{TEAM_CURRENT}}>Our Team</a></li>
+        <li><a href="/#visit">Visit</a></li>
       </ul>
       <span class="hours-chip">TUE–SAT · 8AM–4PM</span>
       <a class="btn btn-primary btn-sm" data-cms-link="order" href="https://thelittledaisybakeshop.getbento.com/catering-store-v2/little-daisy-bake-shop/menu/order-settings" target="_blank" rel="noopener">Order Online</a>
@@ -529,6 +533,7 @@
   </div>
 </header>
 
+<!-- PAGE_MAIN -->
 <main id="top">
 
   <!-- ============ LANDING ============ -->
@@ -984,6 +989,7 @@
           <span class="line">Jennifer Snyder</span>
           <small>Owner &amp; Baker</small>
         </div>
+        <a class="btn btn-outline btn-sm about-team-link" href="/team/">Meet the team</a>
       </div>
     </div>
   </section>
@@ -1056,6 +1062,7 @@
   </section>
 
 </main>
+<!-- PAGE_MAIN -->
 
 <!-- ============ FOOTER ============ -->
 <div class="scallop scallop--cream-to-ink"></div>
@@ -1071,12 +1078,13 @@
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
-        <li><a href="#case">The Counter</a></li>
-        <li><a href="#cakes">Custom Cakes</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#story">Meet the Owner</a></li>
-        <li><a href="#visit">Visit</a></li>
+        <li><a href="/#case">The Counter</a></li>
+        <li><a href="/#cakes">Custom Cakes</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#story">Meet the Owner</a></li>
+        <li><a href="/team/"{{TEAM_CURRENT}}>Our Team</a></li>
+        <li><a href="/#visit">Visit</a></li>
       </ul>
     </div>
     <div class="footer-col">
