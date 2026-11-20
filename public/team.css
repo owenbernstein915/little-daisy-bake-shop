@@ -1,0 +1,85 @@
+.team-page {
+  padding-block: clamp(2.75rem, 6vw, 5.5rem) clamp(3.5rem, 7vw, 6rem);
+}
+
+.team-heading {
+  text-align: center;
+  margin-bottom: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.team-heading h1 {
+  color: var(--plum);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.team-heading p {
+  color: var(--ink-soft);
+  margin: .9rem auto 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  text-wrap: balance;
+}
+
+.team-roster {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.65rem, 3.2vw, 2.75rem) clamp(.9rem, 2vw, 1.5rem);
+}
+
+.team-member {
+  min-width: 0;
+}
+
+.team-portrait {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.team-portrait > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-portrait--illustrated {
+  display: grid;
+  place-items: center;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.team-portrait--illustrated > img {
+  width: 30%;
+  height: auto;
+}
+
+.team-member h2 {
+  margin-top: .9rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.team-role {
+  color: var(--plum);
+  margin-top: .25rem;
+  font-size: clamp(.9rem, 1.3vw, 1rem);
+  line-height: 1.4;
+}
+
+@media (max-width: 920px) {
+  .team-roster { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .team-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team-portrait { border-radius: 14px; }
+}
+
+@media (max-width: 340px) {
+  .team-roster { column-gap: .7rem; }
+}

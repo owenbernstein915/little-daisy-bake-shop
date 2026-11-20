@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Amaya",
+    "role": "Baker",
+    "image": "/images/team/amaya-9affcd3a0c.webp",
+    "image_alt": "Amaya beside the bakery ovens."
+  },
+  {
+    "name": "Anaya",
+    "role": "Customer Service",
+    "image": "/images/team/anaya-68199f4e0a.webp",
+    "image_alt": "Anaya by the bake shop’s front window."
+  },
+  {
+    "name": "Angela",
+    "role": "Baker",
+    "image": "/images/team/angela-d6ebe434fe.webp",
+    "image_alt": "Angela in a bandana and apron by the bakery ovens."
+  },
+  {
+    "name": "Bella",
+    "role": "Customer Service"
+  },
+  {
+    "name": "Bri",
+    "role": "Baker",
+    "image": "/images/team/bri-52b1496436.webp",
+    "image_alt": "Bri wearing a white apron in the bake shop kitchen."
+  },
+  {
+    "name": "Christina",
+    "role": "OG Cookie Decorator",
+    "image": "/images/team/christina-7ddc139809.webp",
+    "image_alt": "Christina in the kitchen beside the cookie cutters and aprons."
+  },
+  {
+    "name": "Gillian",
+    "role": "Customer Service",
+    "image": "/images/team/gillian-c7dcbb4bab.webp",
+    "image_alt": "Gillian beside the bakery display case."
+  },
+  {
+    "name": "Jen",
+    "role": "Cake Decorator",
+    "image": "/images/team/jen-aa663dd14b.webp",
+    "image_alt": "Jen holding a pink birthday cake decorated with a dachshund."
+  },
+  {
+    "name": "Jennifer",
+    "role": "Owner",
+    "image": "/images/team/jennifer-e82f8ccbc4.webp",
+    "image_alt": "Jennifer at Little Daisy Bake Shop."
+  },
+  {
+    "name": "Maddie",
+    "role": "Customer Service",
+    "image": "/images/team/maddie-78930b9711.webp",
+    "image_alt": "Maddie at the front of the bake shop."
+  },
+  {
+    "name": "Rita",
+    "role": "Sheriff",
+    "image": "/images/team/rita-eef81a8021.webp",
+    "image_alt": "Rita in front of the bakery ovens."
+  },
+  {
+    "name": "Rose",
+    "role": "Head Baker",
+    "image": "/images/team/rose-5b90506953.webp",
+    "image_alt": "Rose standing beside the ovens in her baking apron."
+  },
+  {
+    "name": "Selena",
+    "role": "Front of House Manager",
+    "image": "/images/team/selena-4ef24cb005.webp",
+    "image_alt": "Selena at the espresso machine."
+  },
+  {
+    "name": "Weronika",
+    "role": "Customer Service",
+    "image": "/images/team/weronika-c998aa419c.webp",
+    "image_alt": "Weronika behind the coffee counter."
+  }
+]

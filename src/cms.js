@@ -36,9 +36,11 @@
 
   function renderContent(nextData) {
   data = nextData;
-  document.title = data.site.seo_title;
-  var description = document.querySelector('meta[name="description"]');
-  if (description) description.setAttribute('content', data.site.seo_description);
+  if (!document.querySelector('.team-page')) {
+    document.title = data.site.seo_title;
+    var description = document.querySelector('meta[name="description"]');
+    if (description) description.setAttribute('content', data.site.seo_description);
+  }
 
   var brandLogo = document.querySelector('.brand-logo');
   if (brandLogo) {
