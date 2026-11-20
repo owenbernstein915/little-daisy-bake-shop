@@ -38,18 +38,17 @@ function renderPage(main, { title, description, teamPage = false }) {
 }
 
 function renderMember(member, index) {
-  const owner = index === 0;
   const portrait = member.image
-    ? `<div class="team-portrait"><img src="${escapeHtml(member.image)}" alt="${escapeHtml(member.image_alt || member.name)}" decoding="async"></div>`
+    ? `<div class="team-portrait"><img src="${escapeHtml(member.image)}" alt="${escapeHtml(member.image_alt || member.name)}" width="720" height="900" loading="${index < 4 ? 'eager' : 'lazy'}" decoding="async"></div>`
     : '<div class="team-portrait team-portrait--illustrated" aria-hidden="true"><img src="/favicon.svg" alt=""></div>';
-  return `<li class="team-member"${owner ? ' data-team-owner' : ''}>
+  return `<li class="team-member">
         ${portrait}
         <h2>${escapeHtml(member.name)}</h2>
         <p class="team-role">${escapeHtml(member.role)}</p>
       </li>`;
 }
 
-const members = [content.owner, ...JSON.parse(rawTeam)];
+const members = JSON.parse(rawTeam).sort((a, b) => a.name.localeCompare(b.name, 'en'));
 const teamMain = teamTemplate.replace('{{TEAM_MEMBERS}}', () => members.map(renderMember).join('\n      '));
 const teamTitle = `Meet the Team | ${content.site.business_name}`;
 const teamDescription = `Meet the people in the kitchen and behind the counter at ${content.site.business_name} in Upper Montclair, NJ.`;

@@ -160,13 +160,6 @@
   });
   setText('.about-signature .line', data.owner.signature);
   setText('.about-signature small', data.owner.role);
-  setText('[data-team-owner] h2', data.owner.name);
-  setText('[data-team-owner] .team-role', data.owner.role);
-  var teamOwnerImage = document.querySelector('[data-team-owner] .team-portrait:not(.team-portrait--illustrated) img');
-  if (teamOwnerImage && data.owner.image) {
-    teamOwnerImage.src = data.owner.image;
-    teamOwnerImage.alt = data.owner.image_alt || data.owner.name;
-  }
 
   setText('#visit .section-head .eyebrow', data.visit.eyebrow);
   setText('#visit .section-head .h2', data.visit.title);

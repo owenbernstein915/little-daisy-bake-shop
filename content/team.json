@@ -2,5 +2,11 @@
   {
     "name": "Bella",
     "role": "Customer Service"
+  },
+  {
+    "name": "Jennifer",
+    "role": "Owner",
+    "image": "/images/owner-jennifer-snyder.webp",
+    "image_alt": "Jennifer Snyder, owner of Little Daisy Bake Shop"
   }
 ]
